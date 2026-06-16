@@ -68,6 +68,7 @@ export const layer = Layer.effect(
             `  Is directory a git repo: ${ctx.project.vcs === "git" ? "yes" : "no"}`,
             `  Platform: ${process.platform}`,
             `  Today's date: ${new Date().toDateString()}`,
+            `  Current time: ${new Date().toLocaleTimeString('en-US', { hour12: true })}`,
             `</env>`,
           ].join("\n"),
           references.length === 0
